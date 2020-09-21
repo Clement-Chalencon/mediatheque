@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
     protected $fillable = [
-        'name', 'price', 'quantity', 'weight', 'active', 'quantity_alert', 'image', 'description',
+        'name', 'isbn', 'price', 'weight', 'image', 'description',
     ];
+
+    public function stocks()
+    {
+        return $this->hasMany(Stock::class);
+    }
 }
