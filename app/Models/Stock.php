@@ -17,6 +17,6 @@ class Stock extends Model
 
     public function loan_id()
     {
-        return $this->hasOne(Loan::class);
+        return $this->hasMany(Loan::class);
     }
 }
